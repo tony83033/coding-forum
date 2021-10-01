@@ -1,0 +1,804 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="no-js aws-lng-en_US" lang="en-US" data-static-assets="https://a0.awsstatic.com" data-js-version="1.0.340" data-css-version="1.0.353">
+ <head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link rel="dns-prefetch" href="https://a0.awsstatic.com" /> 
+  <link rel="dns-prefetch" href="//d0.awsstatic.com" /> 
+  <link rel="dns-prefetch" href="//d1.awsstatic.com" /> 
+  <title>Getting Started with Amazon Web Services (AWS)</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="robots" content="index, follow" /> 
+  <link rel="canonical" href="https://aws.amazon.com/getting-started/" /> 
+  <link rel="alternate" href="//aws.amazon.com/ar/getting-started/" hreflang="ar-sa" /> 
+  <link rel="alternate" href="//aws.amazon.com/de/getting-started/" hreflang="de-de" /> 
+  <link rel="alternate" href="//aws.amazon.com/getting-started/" hreflang="en-us" /> 
+  <link rel="alternate" href="//aws.amazon.com/es/getting-started/" hreflang="es-es" /> 
+  <link rel="alternate" href="//aws.amazon.com/fr/getting-started/" hreflang="fr-fr" /> 
+  <link rel="alternate" href="//aws.amazon.com/id/getting-started/" hreflang="id-id" /> 
+  <link rel="alternate" href="//aws.amazon.com/it/getting-started/" hreflang="it-it" /> 
+  <link rel="alternate" href="//aws.amazon.com/jp/getting-started/" hreflang="ja-jp" /> 
+  <link rel="alternate" href="//aws.amazon.com/ko/getting-started/" hreflang="ko-kr" /> 
+  <link rel="alternate" href="//aws.amazon.com/pt/getting-started/" hreflang="pt-br" /> 
+  <link rel="alternate" href="//aws.amazon.com/ru/getting-started/" hreflang="ru-ru" /> 
+  <link rel="alternate" href="//aws.amazon.com/th/getting-started/" hreflang="th-th" /> 
+  <link rel="alternate" href="//aws.amazon.com/tr/getting-started/" hreflang="tr-tr" /> 
+  <link rel="alternate" href="//aws.amazon.com/vi/getting-started/" hreflang="vi-vn" /> 
+  <link rel="alternate" href="//aws.amazon.com/cn/getting-started/" hreflang="zh-cn" /> 
+  <link rel="alternate" href="//aws.amazon.com/tw/getting-started/" hreflang="zh-tw" /> 
+  <link rel="icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" /> 
+  <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/libra-css/images/site/fav/favicon.ico" /> 
+  <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png" /> 
+  <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png" /> 
+  <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png" /> 
+  <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/libra-css/images/site/touch-icon-ipad-144-smile.png" /> 
+  <meta property="twitter:card" content="summary" /> 
+  <meta property="twitter:title" content="Getting Started with Amazon Web Services (AWS)" /> 
+  <meta property="twitter:description" content="" /> 
+  <meta property="twitter:image" content="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_179x109.png" /> 
+  <meta property="twitter:site" content="@awscloud" /> 
+  <meta property="og:title" content="Getting Started with Amazon Web Services (AWS)" /> 
+  <meta property="og:type" content="company" /> 
+  <meta property="og:url" content="https://aws.amazon.com/getting-started/" /> 
+  <meta property="og:image" content="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" /> 
+  <meta property="og:site_name" content="Amazon Web Services, Inc." /> 
+  <meta property="fb:pages" content="153063591397681" /> 
+  <meta name="google-site-verification" content="XHghG81ulgiW-3EylGcF48sG28tBW5EH0bNUhgo_DrU" /> 
+  <meta name="msvalidate.01" content="6F92E52A288E266E30C2797ECB5FCCF3" /> 
+  <meta name="baidu-site-verification" content="pjxJUyWxae" /> 
+  <link rel="stylesheet" href="https://a0.awsstatic.com/libra-css/css/1.0.353/style-awsm.css" /> 
+  <script>
+  var AWS = {
+    PageSettings: {
+      supportedLanguages: ['ar', 'en', 'es', 'de', 'fr', 'id', 'it', 'jp', 'ko', 'pt', 'ru', 'th', 'tr', 'vi', 'cn', 'tw'],
+      defaultLanguage: 'en',
+      logDataSet: 'LIVE:PROD',
+      logInstance: 'PUB',
+      csdsEndpoint: 'https://aws.amazon.com/',
+      framework: 'v2',
+      g11nLibPath: 'https://a0.awsstatic.com/g11n-lib/2.0.56',
+      i18nStringPath: 'https://i18n-string.us-west-2.prod.pricing.aws.a2z.com',
+      libraCSSPath: 'https://a0.awsstatic.com/libra-css/css/1.0.353',
+      libraCSSImagePath: 'https://a0.awsstatic.com/libra-css/images',
+      isLoggingEnabled: true,
+      currentLanguage: 'en-US',
+      isMarketplace: false,
+      isRTL: false
+    }
+  };
+
+  var require = {
+    baseUrl: 'https://a0.awsstatic.com',
+    packages: [
+      { name: 'libra', location: 'libra/1.0.340' }
+    ],
+    paths: {
+      "directories": "https://a0.awsstatic.com/libra/1.0.340/directories",
+      "libra-cardsui": "https://a0.awsstatic.com/libra/1.0.340/libra-cardsui",
+      "librastandardlib": "https://a0.awsstatic.com/libra/1.0.340/librastandardlib",
+      "aws-blog": "https://a0.awsstatic.com/aws-blog/1.0.34/js",
+      "plc": "https://a0.awsstatic.com/plc/js/1.0.97/plc",
+      "scripts": "libra/1.0.340/v1-polyfills/scripts",
+      "psf": "https://a0.awsstatic.com/psf/1.1.10",
+      "libra-search": "https://a0.awsstatic.com/libra-search/1.0.13/js",
+      "pricing-calculator": "https://a0.awsstatic.com/pricing-calculator/js/1.0.2",
+      "pricing-savings-plan": "https://a0.awsstatic.com/pricing-savings-plan/js/1.0.4"
+    },
+    waitSeconds: 15
+  };
+</script> 
+  <script src="https://a0.awsstatic.com/libra/1.0.340/libra-head.js"></script> 
+  <script src="https://a0.awsstatic.com/s_code/js/1.0/awshome_s_code.js"></script> 
+  <script>
+      AWS.TargetMediator = {
+        supportedLanguages: AWS.PageSettings.supportedLanguages,offerOrigin: 'https://s0.awsstatic.com',pageLanguage: 'en'
+      };
+    </script> 
+  <script data-js-script="target-mediator" src="https://a0.awsstatic.com/target/1.0.104/aws-target-mediator.js"></script> 
+ </head> 
+ <body class="awsm"> 
+  <header id="aws-page-header" class="awsm m-page-header" role="banner"> 
+   <div id="m-nav" class="m-nav" role="navigation"> 
+    <div class="m-nav-header lb-clearfix" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/desktop/index.html"> 
+     <div class="m-nav-logo"> 
+      <div class="lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+       <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+      </div> 
+     </div> 
+     <div class="m-nav-secondary-links" style="min-width: 620px"> 
+      <a href="/contact-us/?nc2=h_header">Contact Sales</a> 
+      <a class="lb-txt-none lb-tiny-iblock lb-txt-13 lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="popover-support-selector"> Support&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a id="m-nav-language-selector" class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-language-selector" data-language="en">English&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-my-account">My Account&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <div class="m-nav-cta-btn"> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-mbox="en_header_nav_cta" data-lb-comp-ignore="true"> 
+        <div class="lb-btn"> 
+         <a id="aws-nav-cta-button" class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&amp;src=default" style="min-width:171px;"><span>Create an AWS Account</span></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="m-nav-primary-group"> 
+      <div class="m-nav-primary-links"> 
+       <i class="m-nav-angle-left-icon" aria-hidden="true"></i> 
+       <ul> 
+        <li><a href="/products/?nc2=h_ql_prod" data-panel="m-nav-panel-products">Products</a></li> 
+        <li><a href="/solutions/?nc2=h_ql_sol" data-panel="m-nav-panel-solutions">Solutions</a></li> 
+        <li><a href="/pricing/?nc2=h_ql_pr" data-panel="m-nav-panel-pricing">Pricing</a></li> 
+        <li><a href="https://docs.aws.amazon.com/index.html?nc2=h_ql_doc" data-panel="m-nav-panel-documentation">Documentation</a></li> 
+        <li><a href="/getting-started/?nc2=h_ql_le" data-panel="m-nav-panel-learn">Learn</a></li> 
+        <li><a href="/partners/?nc2=h_ql_pn" data-panel="m-nav-panel-partner">Partner Network</a></li> 
+        <li><a href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp" data-panel="m-nav-panel-marketplace">AWS Marketplace</a></li> 
+        <li><a href="/customer-enablement/?nc2=h_ql_ce" data-panel="m-nav-panel-customer">Customer Enablement</a></li> 
+        <li><a href="/events/?nc2=h_ql_ev" data-panel="m-nav-panel-events">Events</a></li> 
+        <li><a href="/contact-us/?nc2=h_ql_exm" data-panel="m-nav-panel-more">Explore More </a></li> 
+       </ul> 
+       <div class="m-nav-icon-group"> 
+        <i class="m-nav-angle-right-icon" aria-hidden="true"></i> 
+        <i class="m-nav-search-icon"></i> 
+       </div> 
+      </div> 
+      <div class="m-nav-search"> 
+       <form action="https://aws.amazon.com/search/" role="search"> 
+        <div class="m-typeahead" data-directory-id="typeahead-suggestions" data-lb-comp="typeahead"> 
+         <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery" /> 
+        </div> 
+       </form> 
+       <i class="m-nav-close-icon"></i> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-language-selector" data-action="hover" data-position="top"> 
+     <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li data-language="ar"> <a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a> </li> 
+        <li data-language="id"> <a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a> </li> 
+        <li data-language="de"> <a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a> </li> 
+        <li data-language="en"> <a href="https://aws.amazon.com/?nc1=h_ls">English</a> </li> 
+        <li data-language="es"> <a href="https://aws.amazon.com/es/?nc1=h_ls">Espa&ntilde;ol</a> </li> 
+        <li data-language="fr"> <a href="https://aws.amazon.com/fr/?nc1=h_ls">Fran&ccedil;ais</a> </li> 
+        <li data-language="it"> <a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a> </li> 
+        <li data-language="pt"> <a href="https://aws.amazon.com/pt/?nc1=h_ls">Portugu&ecirc;s</a> </li> 
+       </ul> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li data-language="vi"> <a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a> </li> 
+        <li data-language="tr"> <a href="https://aws.amazon.com/tr/?nc1=h_ls">T&uuml;rk&ccedil;e</a> </li> 
+        <li data-language="ru"> <a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a> </li> 
+        <li data-language="th"> <a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a> </li> 
+        <li data-language="jp"> <a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a> </li> 
+        <li data-language="ko"> <a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a> </li> 
+        <li data-language="cn"> <a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a> </li> 
+        <li data-language="tw"> <a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-my-account" data-action="hover" data-position="top"> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li> <a href="https://console.aws.amazon.com/?nc2=h_m_mc">AWS Management Console</a> </li> 
+      <li> <a href="https://portal.aws.amazon.com/gp/aws/manageYourAccount?nc2=h_m_ma">Account Settings</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/billing/home?nc2=h_m_bc">Billing &amp; Cost Management</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#security_credential">Security Credentials</a> </li> 
+      <li> <a href="https://phd.aws.amazon.com/?nc2=h_m_sc">AWS Personal Health Dashboard</a> </li> 
+     </ul> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-support-selector" data-action="hover" data-position="top"> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li> <a href="https://console.aws.amazon.com/support/home/?nc2=h_ql_cu">Support Center</a> </li> 
+      <li> <a href="/premiumsupport/knowledge-center/?nc2=h_m_ma">Knowledge Center</a> </li> 
+      <li> <a href="/premiumsupport/?nc2=h_m_bc">AWS Support Overview</a> </li> 
+     </ul> 
+    </div> 
+    <script class="tt-suggestion-tpl" type="text/x-handlebars-template">
+    <div>
+      <a href="{{primaryUrl}}">
+        <div class="tt-title">
+          {{cleanHTMLEntity title}}
+        </div>
+        {{#if desc}}
+          <div class="tt-desc">
+            {{cleanHTMLEntity desc}}
+          </div>
+        {{/if}}
+      </a>
+      <div class="tt-btn-group">
+        {{#if pricingUrl}}
+          <a href="{{pricingUrl}}">
+            <div class="tt-btn">Pricing</div>
+          </a>
+        {{/if}}
+        {{#if docsUrl}}
+          <a href="{{docsUrl}}">
+            <div class="tt-btn">Documentation</div>
+          </a>
+        {{/if}}
+        {{#if calculatorUrl}}
+          <a href="{{calculatorUrl}}">
+            <div class="tt-btn">Calculator</div>
+          </a>
+        {{/if}}
+      </div>
+    </div>
+  </script> 
+    <script class="tt-products-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header lb-txt-bold">
+      <p>Products</p>
+    </div>
+  </script> 
+    <script class="tt-keypages-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header lb-txt-bold">
+      <p>Related Pages</p>
+    </div>
+  </script> 
+    <script class="tt-tutorials-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header lb-txt-bold">
+      <p>Tutorials</p>
+    </div>
+  </script> 
+    <script class="tt-blogs-head-tpl" type="text/x-handlebars-template">
+    <div class="tt-header lb-txt-bold">
+      <p>Blogs</p>
+    </div>
+  </script> 
+    <script class="tt-see-all-tpl" type="text/x-handlebars-template">
+    <div class="tt-see-all">
+      <a href="https://aws.amazon.com/search/?searchQuery={{ query }}">See more results for "{{ query }}"&lrm;</a>
+    </div>
+  </script> 
+   </div> 
+   <div id="m-nav-mobile" class="m-nav-mobile"> 
+    <div id="m-nav-mobile-header" class="m-nav-mobile-header" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/mobile/index.html"> 
+     <div class="lb-bg-logo aws-amazon_web_services_smile-header-mobile-en"> 
+      <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+     </div> 
+     <div class="m-nav-mobile-button-group"> 
+      <i class="m-nav-mobile-button icon-search"></i> 
+      <i class="m-nav-mobile-button icon-reorder"></i> 
+     </div> 
+    </div> 
+    <div id="m-nav-mobile-search" class="m-nav-mobile-search"> 
+     <form action="https://aws.amazon.com/search" role="search"> 
+      <div class="m-typeahead"> 
+       <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery" /> 
+      </div> 
+     </form> 
+    </div> 
+    <nav id="m-nav-trimdown" role="navigation"> 
+     <ul class="m-nav-mobile-menu-group"> 
+      <li> <a href="/products/?nc2=h_mo">Products</a> </li> 
+      <li> <a href="/solutions/?nc2=h_mo">Solutions</a> </li> 
+      <li> <a href="/pricing/?nc2=h_mo">Pricing</a> </li> 
+      <li> <a href="/what-is-aws/?nc2=h_mo">Introduction to AWS</a> </li> 
+      <li> <a href="/getting-started/?nc2=h_mo">Getting Started</a> </li> 
+      <li> <a href="/documentation/?nc2=h_mo">Documentation</a> </li> 
+      <li> <a href="/training/?nc2=h_mo">Training and Certification</a> </li> 
+      <li> <a href="/developer/?nc2=h_mo">Developer Center</a> </li> 
+      <li> <a href="/solutions/case-studies/?nc2=h_mo">Customer Success</a> </li> 
+      <li> <a href="/partners/?nc2=h_mo">Partner Network</a> </li> 
+      <li> <a href="https://aws.amazon.com/marketplace/?nc2=h_mo">AWS Marketplace</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">Support</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/console/home">Log into Console</a> </li> 
+      <li> <a href="/console/mobile/">Download the Mobile App</a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div id="aws-page-content" class="lb-page-content" style="padding-top:0px; padding-bottom:0px;" data-page-alert-target="true"> 
+   <main role="main"> 
+    <div class="lb-sticky-subnav" data-lb-comp="sticky-subnav" data-lb-page-path="/getting-started/"> 
+     <div class="lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-tiny-24 lb-sticky-subnav-content"> 
+       <div class="lb-sticky-subnav-title"> 
+        <div class="lb-txt">
+          Getting Started Resource Center 
+        </div> 
+       </div> 
+       <div class="lb-sticky-subnav-links"> 
+        <a class="lb-txt-bold lb-txt-none lb-txt lb-current-page-link" href="/getting-started/"> Overview</a> 
+        <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="fundamentals"> Fundamentals&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+        <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="learning-paths"> Learning Paths&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+        <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="category"> Category Deep Dive&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+        <a class="lb-txt-bold lb-txt-none lb-txt" href="/getting-started/hands-on/"> Hands-On Tutorials</a> 
+        <a class="lb-txt-bold lb-txt-none lb-txt" href="/getting-started/additional-resources/"> Resources</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="fundamentals" data-action="hover" data-position="top"> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/fundamentals-overview/"> Introduction</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/fundamentals-core-concepts/"> Core Concepts</a> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="category" data-action="hover" data-position="top"> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/deep-dive-databases/"> Databases</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/deep-dive-serverless/"> Serverless</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23containers&amp;awsf.getting-started-content-type=content-type%23hands-on"> Containers</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/deep-dive-ml/"> Machine Learning</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23compute&amp;awsf.getting-started-content-type=content-type%23hands-on"> Compute</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23storage&amp;awsf.getting-started-content-type=content-type%23hands-on"> Storage</a> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="learning-paths" data-action="hover" data-position="top"> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/learning-path-full-stack-developer/"> Full-Stack Developer</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/learning-path-front-end-developer/"> Front-End Developer</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/learning-path-hobbyist-developer/"> Hobbyist Developer</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/learning-path-data-scientist/"> Data Scientist</a> 
+     <a class="lb-txt-none lb-txt" href="/getting-started/learning-path-database-administrator/"> Database Administrator</a> 
+    </div> 
+    <div class="lb-bg-left-center-cover-no-repeat lb-mid-pad lb-none-v-margin lb-grid" style="background-image:url('//d1.awsstatic.com/webteam/getting_started/GSRC%20v3/WEB_GSRC_Need-Help_Hero_Green.b8e13a844dd7907fa4f867e1f21b7b78bce2acb9.png');"> 
+     <div class="lb-row lb-row-max-mid lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-16"> 
+       <h1 id="Getting_Started_with_AWS" class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h1 lb-title"> Getting Started with AWS</h1> 
+       <h2 id="Learn_the_fundamentals_and_start_building_on_AWS_now." class="lb-txt-light lb-txt-none lb-txt-white lb-tiny-v-margin lb-h2 lb-title"> Learn the fundamentals and start building on AWS now.</h2> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-8"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid" style="background-color:#F2F3F3; margin-top:0px;"> 
+     <div class="lb-row lb-row-max-mid lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h3 id="Get_to_Know_the_AWS_Cloud" class="lb-txt-none lb-h3 lb-title" style="margin-top:30px;"> Get to Know the AWS Cloud</h3> 
+       <div class="lb-txt-16 lb-rtxt"> 
+        <p>AWS fundamentals you need to know before launching your first application.<br /> </p> 
+       </div> 
+       <div class="lb-grid"> 
+        <div class="lb-row lb-row-max-large lb-snap"> 
+         <div class="lb-col lb-tiny-24 lb-mid-12"> 
+          <div class="lb-border-p-feature lb-box"> 
+           <div class="lb-small-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="GSRC_SM-Page-Illos_AWS-Fundamentals_10-Min-Overview" title="GSRC_SM-Page-Illos_AWS-Fundamentals_10-Min-Overview" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/GSRC_SM-Page-Illos_AWS-Fundamentals_10-Min-Overview.bd88b84aca616e1d22c29c087c72b77bcb87fd38.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/fundamentals-overview/?e=gs2020&amp;p=gsrc" target="_blank"> Watch Intro Video</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn about app development on AWS and the developer tools available to support you. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-12"> 
+          <div class="lb-border-p-feature lb-box"> 
+           <div class="lb-small-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="GSRC_SM-Page-Illos_AWS-Fundamentals_Environment-Setup" title="GSRC_SM-Page-Illos_AWS-Fundamentals_Environment-Setup" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/GSRC_SM-Page-Illos_AWS-Fundamentals_Environment-Setup.fce4d121df40179e568824cef72ebe7862ef3488.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/fundamentals-core-concepts/?e=gs2020&amp;p=gsrc" target="_blank"> Learn Core AWS Concepts</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Acquire the knowledge you need to easily navigate the AWS Cloud. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-tiny-v-margin lb-grid" style="margin-top:0px;"> 
+     <div class="lb-row lb-row-max-mid lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h3 id="Launch_Your_First_Application" class="lb-txt-none lb-h3 lb-title" style="margin-top:15px;"> Launch Your First Application</h3> 
+       <div class="lb-txt-none lb-txt-16 lb-txt">
+         Select a learning path for step-by-step tutorials to get you up and running in less than an hour. 
+       </div> 
+       <div class="lb-small-v-margin lb-grid lb-row lb-row-max-large lb-snap" style="margin-top:35px;"> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <div class="lb-border-p-feature lb-box"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-6"> 
+            <figure class="lb-img"> 
+             <div> 
+              <img alt="GSRC_SM-Page-Illos_Learning-Paths_Full-Stack-Developer" title="GSRC_SM-Page-Illos_Learning-Paths_Full-Stack-Developer" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/GSRC_SM-Page-Illos_Learning-Paths_Full-Stack-Developer.ce098005bee11c83e5ac33b2eaad98dc63a7a7c0.png" /> 
+             </div> 
+            </figure> 
+           </div> 
+           <div class="lb-col lb-tiny-24 lb-mid-18"> 
+            <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/learning-path-full-stack-developer/?e=gs2020&amp;p=gsrc" target="_blank"> Full-Stack Developer</a> 
+            <div class="lb-txt-none lb-txt-16 lb-txt">
+              Launch a web app and connect it to a backend 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-border-p-feature lb-mid-v-margin lb-box" style="margin-bottom:0px;"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-6"> 
+            <figure class="lb-img"> 
+             <div> 
+              <img alt="AWS-SageMaker-Ground-Truth_64" title="AWS-SageMaker-Ground-Truth_64" src="//d1.awsstatic.com/product-marketing/Amazon%20Machine%20Learning/AWS-SageMaker-Ground-Truth_64.e10704236380a311861a735dcf8e78f29b125fa1.png" /> 
+             </div> 
+            </figure> 
+           </div> 
+           <div class="lb-col lb-tiny-24 lb-mid-18"> 
+            <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/learning-path-data-scientist/?e=gs2020&amp;p=gsrc" target="_blank"> Data Scientist</a> 
+            <div class="lb-txt-none lb-txt-16 lb-txt">
+              Build, train, and deploy ML models 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <div class="lb-border-p-feature lb-box"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-6"> 
+            <figure class="lb-img"> 
+             <div> 
+              <img alt="product-icon_AWS_Amplify_125_squid-ink" title="product-icon_AWS_Amplify_125_squid-ink" src="//d1.awsstatic.com/logos/product-icon_AWS_Amplify_125_squid-ink.93b7d101b2d0e7024c4f46ff58c537fe989c1b62.png" /> 
+             </div> 
+            </figure> 
+           </div> 
+           <div class="lb-col lb-tiny-24 lb-mid-18"> 
+            <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/learning-path-front-end-developer/?e=gs2020&amp;p=gsrc" target="_blank"> Front-End Developer</a> 
+            <div class="lb-txt-none lb-txt-16 lb-txt">
+              Deploy and host a React web app 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-border-p-feature lb-mid-v-margin lb-box" style="margin-bottom:0px;"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-6"> 
+            <figure class="lb-img"> 
+             <div> 
+              <img alt="DMS" title="DMS" src="//d1.awsstatic.com/product-marketing/DMS/DMS.aef0c1073c560f8027335bb78ab6c3d76f2cba15.png" /> 
+             </div> 
+            </figure> 
+           </div> 
+           <div class="lb-col lb-tiny-24 lb-mid-18"> 
+            <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/learning-path-database-administrator/?e=gs2020&amp;p=gsrc" target="_blank"> Database Administrator</a> 
+            <div class="lb-txt-none lb-txt-16 lb-txt">
+              Migrate your database workloads 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <div class="lb-border-p-feature lb-box"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-6"> 
+            <figure class="lb-img"> 
+             <div> 
+              <img alt="product-icon_Amazon_Lightsail_icon_squid_ink_125" title="product-icon_Amazon_Lightsail_icon_squid_ink_125" src="//d1.awsstatic.com/Compute/product-icon_Amazon_Lightsail_icon_squid_ink_125.f1e178434f0da6d72a9609f1c98aa2c398c79c7b.png" /> 
+             </div> 
+            </figure> 
+           </div> 
+           <div class="lb-col lb-tiny-24 lb-mid-18"> 
+            <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/learning-path-hobbyist-developer/?e=gs2020&amp;p=gsrc" target="_blank"> Hobbyist Developer</a> 
+            <div class="lb-txt-none lb-txt-16 lb-txt">
+              Build and scale a WordPress website 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-mid-v-margin lb-box" style="margin-bottom:0px;"> 
+          <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+           <div class="lb-col lb-tiny-24 lb-mid-24"> 
+            <div class="lb-mid-v-margin lb-btn" style="margin-bottom:0px;"> 
+             <a class="lb-btn-p-primary" href="/getting-started/hands-on/?awsf.getting-started-content-type=content-type%23hands-on&amp;?e=gs2020&amp;p=gsrc" target="_blank" role="button"> <span> Explore All Tutorials</span> </a> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-grid" style="background-color:#F2F3F3; margin-bottom:0px;"> 
+     <div class="lb-row lb-row-max-mid lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-24"> 
+       <h3 id="Dive_Deeper" class="lb-txt-none lb-h3 lb-title" style="margin-top:35px;"> Dive Deeper</h3> 
+       <div class="lb-txt-16 lb-rtxt"> 
+        <p>Comprehensive resources to get the most out of the AWS Cloud.</p> 
+       </div> 
+       <div class="lb-grid" style="margin-top:0px;"> 
+        <div class="lb-row lb-row-max-large lb-snap"> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="Database_Category-Icon_64" title="Database_Category-Icon_64" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Database_Category-Icon_64.294d32ec830542fdde57a8728ce4360647c1a16d.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/deep-dive-databases/?e=gs2020&amp;p=gsrc" target="_blank"> Databases</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn what databases are and how to choose the right ones for your use cases and access patterns. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="ML_Services_BLK" title="ML_Services_BLK" src="//d1.awsstatic.com/product-marketing/AI/Banners/ML_Services_BLK.d90c3ecff877a87eddffd1348c6972bf3114d2d7.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/deep-dive-ml/?e=gs2020&amp;p=gsrc" target="_blank"> Machine Learning</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn how to add intelligence to your applications and train ML models. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="GSRC_SM-Page-Illos_Category-Learning-Library_Serverless" title="GSRC_SM-Page-Illos_Category-Learning-Library_Serverless" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/GSRC_SM-Page-Illos_Category-Learning-Library_Serverless.7a661097f4b9a679120ceef3b8b6b47195940a92.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/deep-dive-serverless/?e=gs2020&amp;p=gsrc" target="_blank"> Serverless</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn to build and run applications and backend services without thinking about servers. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="category-icon_Compute_icon_squid_ink_125" title="category-icon_Compute_icon_squid_ink_125" src="//d1.awsstatic.com/Compute/category-icon_Compute_icon_squid_ink_125.276cdea6d07160ffb53a1fd95584f5312a1c45a7.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23compute&amp;awsf.getting-started-content-type=content-type%23hands-on&amp;?e=gs2020&amp;p=gsrc" target="_blank"> Compute</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn about compute services to develop, deploy, run, and scale your applications. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="Containers_Icon_64_Squid" title="Containers_Icon_64_Squid" src="//d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Containers_Icon_64_Squid.316195a6fdadc7d3a87a337efa6f100906428cb5.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23containers&amp;awsf.getting-started-content-type=content-type%23hands-on&amp;?e=gs2020&amp;p=gsrc" target="_blank"> Containers</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn what containers are and how to choose the right one for your use cases. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="lb-border-p-feature lb-small-v-margin lb-box"> 
+           <div class="lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+            <div class="lb-col lb-tiny-24 lb-mid-6"> 
+             <figure class="lb-img"> 
+              <div> 
+               <img alt="category-icon_Storage_icon_squid_ink_125" title="category-icon_Storage_icon_squid_ink_125" src="//d1.awsstatic.com/icons/Storage%20Icons/category-icon_Storage_icon_squid_ink_125.3fef753e88fa46c34c5b07a96bbb50405dedfb51.png" /> 
+              </div> 
+             </figure> 
+            </div> 
+            <div class="lb-col lb-tiny-24 lb-mid-18"> 
+             <a class="lb-txt-bold lb-txt-none lb-txt-blue-link lb-txt-18 lb-txt" href="/getting-started/hands-on/?awsf.getting-started-category=category%23storage&amp;awsf.getting-started-content-type=content-type%23hands-on&amp;?e=gs2020&amp;p=gsrc" target="_blank"> Storage</a> 
+             <div class="lb-txt-none lb-txt-16 lb-txt">
+               Learn how to reliably, scalably, and securely store your application's data in the cloud. 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+  </div> 
+  <footer id="aws-page-footer" class="m-page-footer" role="contentinfo"> 
+   <div data-url="https://dc.ads.linkedin.com/collect/?pid=3038&amp;fmt=gif" data-lb-comp="tracking-pixel"></div> 
+   <div data-lb-comp="google-rlsa-pixel"></div> 
+   <div class="data-attr-wrapper lb-none-v-margin lb-xb-grid-wrap" style="background-color:#242F3E;" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer" data-da-so-version="a"> 
+    <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1 lb-small-xb-3 lb-large-xb-5"> 
+     <div class="lb-xbcol"> 
+      <div class="data-attr-wrapper lb-small-hide lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signin-mobile-default"> 
+       <a class="lb-btn-p-primary" href="https://console.aws.amazon.com/console/home?nc1=f_ct&amp;src=footer-signin-mobile" role="button"> <span> Sign In to the Console</span> </a> 
+      </div> 
+      <h3 id="Learn_About_AWS" class="lb-txt-none lb-txt-p-chromium lb-tiny-v-margin lb-h3 lb-title"> Learn About AWS</h3> 
+      <ul class="lb-txt-p-chromium lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+       <li><a href="/what-is-aws/?nc1=f_cc" target="_blank">What Is AWS?</a></li> 
+       <li><a href="/what-is-cloud-computing/?nc1=f_cc" target="_blank">What Is Cloud Computing?</a></li> 
+       <li><a href="/devops/what-is-devops/?nc1=f_cc" target="_blank">What Is DevOps?</a></li> 
+       <li><a href="/containers/?nc1=f_cc" target="_blank">What Is a Container?</a></li> 
+       <li><a href="/big-data/datalakes-and-analytics/what-is-a-data-lake/?nc1=f_cc" target="_blank">What Is a Data Lake?</a></li> 
+       <li><a href="/security/?nc1=f_cc" target="_blank">AWS Cloud Security</a></li> 
+       <li><a href="/new/?nc1=f_cc" target="_blank">What's New</a></li> 
+       <li><a href="/blogs/?nc1=f_cc" target="_blank">Blogs</a></li> 
+       <li><a href="https://press.aboutamazon.com/press-releases/aws" target="_blank" title="Press Releases">Press Releases</a></li> 
+      </ul> 
+     </div> 
+     <div class="lb-xbcol"> 
+      <h3 id="Resources_for_AWS" class="lb-txt-none lb-txt-p-chromium lb-tiny-v-margin lb-h3 lb-title"> Resources for AWS</h3> 
+      <ul class="lb-txt-p-chromium lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+       <li><a href="/getting-started/?nc1=f_cc" target="_blank">Getting Started</a></li> 
+       <li><a href="/training/?nc1=f_cc" target="_blank">Training and Certification</a></li> 
+       <li><a href="/solutions/?nc1=f_cc" target="_blank">AWS Solutions Portfolio</a></li> 
+       <li><a href="/architecture/?nc1=f_cc" target="_blank">Architecture Center</a></li> 
+       <li><a href="/faqs/?nc1=f_dr" target="_blank">Product and Technical FAQs</a></li> 
+       <li><a href="/resources/analyst-reports/?nc1=f_cc" target="_blank">Analyst Reports</a></li> 
+       <li><a href="/partners/?nc1=f_dr" target="_blank">AWS Partner Network</a></li> 
+      </ul> 
+     </div> 
+     <div class="lb-xbcol"> 
+      <h3 id="Developers_on_AWS" class="lb-txt-none lb-txt-p-chromium lb-tiny-v-margin lb-h3 lb-title"> Developers on AWS</h3> 
+      <ul class="lb-txt-p-chromium lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+       <li><a href="/developer/?nc1=f_dr" target="_blank">Developer Center</a></li> 
+       <li><a href="/developer/tools/?nc1=f_dr" target="_blank">SDKs &amp; Tools</a></li> 
+       <li><a href="/developer/language/net/?nc1=f_dr" target="_blank">.NET on AWS</a></li> 
+       <li><a href="/developer/language/python/?nc1=f_dr" target="_blank">Python on AWS</a></li> 
+       <li><a href="/developer/language/java/?nc1=f_dr" target="_blank">Java on AWS</a></li> 
+       <li><a href="/developer/language/php/?nc1=f_cc" target="_blank">PHP on AWS</a></li> 
+       <li><a href="/developer/language/javascript/?nc1=f_dr" target="_blank">Javascript on AWS</a></li> 
+      </ul> 
+     </div> 
+     <div class="lb-xbcol"> 
+      <h3 id="Help" class="lb-txt-none lb-txt-p-chromium lb-tiny-v-margin lb-h3 lb-title"> Help</h3> 
+      <ul class="lb-txt-p-chromium lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+       <li><a href="/contact-us/?nc1=f_m" target="_blank">Contact Us</a></li> 
+       <li><a href="/careers/?nc1=f_hi" target="_blank">AWS Careers</a></li> 
+       <li><a href="https://console.aws.amazon.com/support/home/?nc1=f_dr" target="_blank">File a Support Ticket</a></li> 
+       <li><a href="/premiumsupport/knowledge-center/?nc1=f_dr" target="_blank">Knowledge Center</a></li> 
+       <li><a href="/premiumsupport/?nc1=f_dr" target="_blank">AWS Support Overview</a></li> 
+       <li><a href="/legal/?nc1=f_cc" target="_blank">Legal</a></li> 
+      </ul> 
+      <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-mbox="en_footer-v3_addl-help" data-lb-comp-ignore="true"> 
+      </div> 
+     </div> 
+     <div class="lb-xbcol"> 
+      <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-mbox="en_footer-v3_cta" data-lb-comp-ignore="true"> 
+       <div class="data-attr-wrapper lb-tiny-hide lb-small-show lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signup-default"> 
+        <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=f_ct&amp;src=default" role="button"> <span> Create an AWS Account</span> </a> 
+       </div> 
+      </div> 
+      <div class="lb-xb-grid-wrap" style="padding-left:0px; margin-top:20px;"> 
+       <div class="lb-xb-grid lb-row-max-large lb-xb-equal-height lb-snap lb-gutter-collapse lb-vgutter-collapse lb-tiny-xb-auto"> 
+        <div class="lb-xbcol"> 
+         <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="monitoring" data-da-so-url="all" data-da-so-version="twitter" data-da-so-language="en" data-da-so-name="footer-socials" data-da-type="so" data-da-so-type="viewport"> 
+          <a class="lb-txt-none lb-txt-p-chromium lb-none-pad lb-txt" style="padding-left:0px; padding-right:12px;" href="https://twitter.com/awscloud" target="_blank" title="Twitter"> <i class="icon-twitter"></i></a> 
+         </div> 
+        </div> 
+        <div class="lb-xbcol"> 
+         <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="monitoring" data-da-so-url="all" data-da-so-version="facebook" data-da-so-language="en" data-da-so-name="footer-socials" data-da-type="so" data-da-so-type="viewport"> 
+          <a class="lb-txt-none lb-txt-p-chromium lb-none-pad lb-none-v-margin lb-txt" style="padding-right:12px;" href="https://www.facebook.com/amazonwebservices" target="_blank" title="Facebook"> <i class="icon-facebook"></i></a> 
+         </div> 
+        </div> 
+        <div class="lb-xbcol"> 
+         <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="monitoring" data-da-so-url="all" data-da-so-version="twitch" data-da-so-language="en" data-da-so-name="footer-socials" data-da-type="so" data-da-so-type="viewport"> 
+          <a class="lb-txt-none lb-txt-p-chromium lb-none-pad lb-txt" style="padding-right:12px;" href="https://www.twitch.tv/aws" target="_blank" title="Twitch"> <i class="icon-twitch"></i></a> 
+         </div> 
+        </div> 
+        <div class="lb-xbcol"> 
+         <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="monitoring" data-da-so-url="all" data-da-so-version="aws-podcast" data-da-so-language="en" data-da-so-name="footer-socials" data-da-type="so" data-da-so-type="viewport"> 
+          <a class="lb-txt-none lb-txt-p-chromium lb-none-pad lb-txt" style="padding-right:12px;" href="https://aws.amazon.com/podcasts/aws-podcast/" target="_blank" title="Podcast"> <i class="icon-podcast"></i></a> 
+         </div> 
+        </div> 
+        <div class="lb-xbcol"> 
+         <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-so-category="monitoring" data-da-so-url="all" data-da-so-version="newsletter" data-da-so-language="en" data-da-so-name="footer-socials" data-da-type="so" data-da-so-type="viewport"> 
+          <a class="lb-txt-none lb-txt-p-chromium lb-none-pad lb-txt" style="padding-right:12px;" href="https://pages.awscloud.com/communication-preferences?trk=homepage" target="_blank" title="Email"> <i class="icon-envelope-o"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="lb-txt-normal lb-txt-white lb-txt-14 lb-rtxt" style="color:#eaeded; margin-top:0px;"> 
+       <div>
+         Amazon is an Equal Opportunity Employer: 
+        <i> Minority / Women / Disability / Veteran / Gender Identity / Sexual Orientation / Age.</i> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#242F3E;"> 
+    <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+     <div class="lb-xbcol"> 
+      <ul class="lb-txt-p-chromium lb-tiny-iblock lb-none-v-margin lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-iblock"> 
+       <li class="lb-txt-bold">Language</li> 
+       <li data-language="ar"><a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a></li> 
+       <li data-language="id"><a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a></li> 
+       <li data-language="de"><a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a></li> 
+       <li data-language="en"><a href="https://aws.amazon.com/?nc1=h_ls">English</a></li> 
+       <li data-language="es"><a href="https://aws.amazon.com/es/?nc1=h_ls">Espa&ntilde;ol</a></li> 
+       <li data-language="fr"><a href="https://aws.amazon.com/fr/?nc1=h_ls">Fran&ccedil;ais</a></li> 
+       <li data-language="it"><a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a></li> 
+       <li data-language="pt"><a href="https://aws.amazon.com/pt/?nc1=h_ls">Portugu&ecirc;s</a></li> 
+       <li data-language="vi"><a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a></li> 
+       <li data-language="tr"><a href="https://aws.amazon.com/tr/?nc1=h_ls">T&uuml;rk&ccedil;e</a></li> 
+       <li data-language="ru"><a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a></li> 
+       <li data-language="th"><a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a></li> 
+       <li data-language="jp"><a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a></li> 
+       <li data-language="ko"><a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a></li> 
+       <li data-language="cn"><a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a></li> 
+       <li data-language="tw"><a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#EAEDED; padding-top:5px;"> 
+    <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+     <div class="lb-xbcol"> 
+      <ul class="lb-txt-p-squid-ink lb-none-v-margin lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-iblock"> 
+       <li><a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a></li> 
+       <li>|</li> 
+       <li><a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a></li> 
+       <li>|</li> 
+       <li>&copy; 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.</li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <div id="aws-page-end"></div> 
+  <div id="lb-page-end"></div> 
+  <script src="https://a0.awsstatic.com/pre-offer/1.0.11/content/sitePriv/main.js" async=""></script> 
+  <script src="https://a0.awsstatic.com/da/js/1.0.40/aws-da.js"></script> 
+  <!-- SiteCatalyst code version: H.25.1. Copyright 1996-2012 Adobe, Inc. All Rights Reserved --> 
+  <script><!--
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script> 
+  <script><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script> 
+  <noscript> 
+   <img src="//amazonwebservices.d2.sc.omtrdc.net/b/ss/awsamazonalldev2/1/H.25.1--NS/0" height="1" width="1" border="0" alt="" /> 
+  </noscript> 
+  <!--/DO NOT REMOVE/--> 
+  <!-- End SiteCatalyst code version: H.25.1. --> 
+  <!--[if lte IE 9]>
+  <script>
+    jQuery = $ = undefined;
+  </script>
+  <p class="deprecated-browser-support-message">
+    You are using an <strong>outdated</strong> browser. Please upgrade to Internet Explorer 11 or another modern browser to improve your experience.<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&method=NA&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567"
+           alt="deprecated-browser pixel tag" />
+      </p>
+<![endif]--> 
+  <script>
+  if (document.documentMode === 10) {
+    var msg = 'You are using an <strong>outdated</strong> browser. Please upgrade to Internet Explorer 11 or another modern browser to improve your experience.';
+    $('html').addClass('unsupported-version');
+    $(document.body).append('<p class="deprecated-browser-support-message">' + msg + '<img src="https://fls-na.amazon.com/1/action-impressions/1/OE/aws-mktg/action/awsm_:comp_DeprecatedBrowser@v=1:u=c?dataset=LIVE:PROD&instance=PUB&client=dsk&method=NA&marketplaceId=A12QK8IU0H0XW5&requestId=ABCDEFGHIJKLMNOPQRST&session=123-1234567-1234567" alt="deprecated-browser pixel tag" /></p>');
+    jQuery = $ = undefined;
+  }
+</script> 
+  <!-- updated_at: 2020-07-15T11:43:09.860-0700 -->  
+ </body>
+</html>
